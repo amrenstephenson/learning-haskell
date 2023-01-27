@@ -1,6 +1,3 @@
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Use :" #-}
-
 main :: IO()
 
 shuffle :: [a] -> [a]
