@@ -7,6 +7,7 @@ init' :: [a] -> [a]
 init' [a] = []
 init' (x:xs) = x : init' xs
 
+-- The same as the first, but written differently. VSCode suggested I change it to the first.
 init'' :: [a] -> [a]
 init'' [a] = []
 init'' (x:xs) = [x] ++ init' xs
