@@ -4,13 +4,13 @@ main :: IO()
 -- Time complexity: O(n).
 butlast :: [a] -> a
 butlast xs = last (reverse (drop 1 (reverse xs)))
--- More elegant alternative from the given solution:    butlast xs = head (reverse (tail xs))
--- Which can be written in point-free style:            butlast' = head . reverse . tail
+-- From solutions: A more elegant alternative:                  butlast xs = head (reverse (tail xs))
+-- From solutions: Which can be written in point-free style:    butlast' = head . reverse . tail
 
 -- Using only pattern matching.
 -- Time complexity: O(n).
 butlast' :: [a] -> a
-butlast' [a, b] = a -- An alterntive is to replace b with _ as we have no need for it.
+butlast' [a, b] = a -- From solutions: An alterntive is to replace b with _ as we have no need for it.
 butlast' (x:xs) = butlast' xs
 
 main = do
