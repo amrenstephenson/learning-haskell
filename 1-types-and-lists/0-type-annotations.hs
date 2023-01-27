@@ -6,10 +6,10 @@ x1 = ['a', 'b', 'c']
 x2 :: (Char, Char, Char) -- Correct
 x2 = ('a', 'b', 'c')
 
-x3 :: [(Bool, Int)] -- [(Bool, Integer)] is less restrictive
+x3 :: [(Bool, Int)] -- Num a => [(Bool, a)] is less restrictive
 x3 = [(False, 0), (True, 10)]
 
-x4 :: ([Bool], [Int]) -- ([Bool], [Integer]) is less restrictive
+x4 :: ([Bool], [Int]) -- Num a => ([Bool], [a]) is less restrictive
 x4 = ([False, True], [0, 1])
 
 x5 :: [[a] -> [a]] -- Correct
